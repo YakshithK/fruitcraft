@@ -1,15 +1,12 @@
-package yakshith.fruitcraft.items;
+package yakshith.fruitcraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 
 import net.minecraft.world.item.ItemStack;
 import yakshith.fruitcraft.Fruitcraft;

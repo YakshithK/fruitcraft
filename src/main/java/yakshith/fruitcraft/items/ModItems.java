@@ -15,57 +15,67 @@ import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import yakshith.fruitcraft.Fruitcraft;
 
+import java.util.function.Function;
+
 public class ModItems {
+    public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings){
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, name));
+
+        T item = itemFactory.apply(settings.setId(itemKey));
+
+        Registry.register(BuiltInRegistries.ITEM, itemKey, item);
+
+        return item;
+    }
 
     // MANGO
-    public static final Identifier MANGO_ID = Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "mango");
-    public static final ResourceKey<Item> MANGO_KEY = ResourceKey.create(Registries.ITEM, MANGO_ID);
-    public static final Item MANGO = new Item(new Item.Properties().setId(MANGO_KEY)
-            .food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).alwaysEdible().build()));
+    public static final Item MANGO = register(
+            "mango",
+            Item::new,
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build())
+    );
 
     // CHERRY
-    public static final Identifier CHERRY_ID = Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "cherry");
-    public static final ResourceKey<Item> CHERRY_KEY = ResourceKey.create(Registries.ITEM, CHERRY_ID);
-    public static final Item CHERRY = new Item(new Item.Properties().setId(CHERRY_KEY)
-            .food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f).alwaysEdible().build()));
+    public static final Item CHERRY = register(
+            "cherry",
+            Item::new,
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f).build())
+    );
 
     // GRAPES
-    public static final Identifier GRAPES_ID = Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "grapes");
-    public static final ResourceKey<Item> GRAPES_KEY = ResourceKey.create(Registries.ITEM, GRAPES_ID);
-    public static final Item GRAPES = new Item(new Item.Properties().setId(GRAPES_KEY)
-            .food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.5f).alwaysEdible().build()));
+    public static final Item GRAPES = register(
+            "grapes",
+            Item::new,
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.5f).build())
+    );
 
     // LYCHEE
-    public static final Identifier LYCHEE_ID = Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "lychee");
-    public static final ResourceKey<Item> LYCHEE_KEY = ResourceKey.create(Registries.ITEM, LYCHEE_ID);
-    public static final Item LYCHEE = new Item(new Item.Properties().setId(LYCHEE_KEY)
-            .food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f).alwaysEdible().build()));
+    public static final Item LYCHEE = register(
+            "lychee",
+            Item::new,
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f).build())
+    );
 
     // DRAGONFRUIT
 
-    public static final Consumable LEVITATION_CONSUMABLE = Consumables.defaultFood()
+    public static final Consumable DRAGONFRUIT_CONSUMABLE = Consumables.defaultFood()
             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.LEVITATION, 6 * 20, 1), 1.0f))
             .build();
 
-    public static final FoodProperties LEVITATION_COMPONENT = new FoodProperties.Builder()
+    public static final FoodProperties DRAGONFRUIT_COMPONENT = new FoodProperties.Builder()
             .alwaysEdible()
             .nutrition(6)
             .saturationModifier(0.75f)
             .alwaysEdible()
             .build();
 
-    public static final Identifier DRAGONFRUIT_ID = Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "dragonfruit");
-    public static final ResourceKey<Item> DRAGONFRUIT_KEY = ResourceKey.create(Registries.ITEM, DRAGONFRUIT_ID);
-    public static final Item DRAGONFRUIT = new Item(new Item.Properties().setId(DRAGONFRUIT_KEY)
-            .food(LEVITATION_COMPONENT, LEVITATION_CONSUMABLE));
+    public static final Item DRAGONFRUIT = register(
+            "dragonfruit",
+            Item::new,
+            new Item.Properties().food(DRAGONFRUIT_COMPONENT, DRAGONFRUIT_CONSUMABLE)
+    );
 
-    public static void registerModItems() {
-        Fruitcraft.LOGGER.info("Registering Mod Items for " + Fruitcraft.MOD_ID);
 
-        Registry.register(BuiltInRegistries.ITEM, MANGO_KEY, MANGO);
-        Registry.register(BuiltInRegistries.ITEM, CHERRY_KEY, CHERRY);
-        Registry.register(BuiltInRegistries.ITEM, GRAPES_KEY, GRAPES);
-        Registry.register(BuiltInRegistries.ITEM, LYCHEE_KEY, LYCHEE);
-        Registry.register(BuiltInRegistries.ITEM, DRAGONFRUIT_KEY, DRAGONFRUIT);
+    public static void initialize() {
     }
 }
