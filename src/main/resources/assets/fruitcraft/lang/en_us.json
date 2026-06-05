@@ -3,5 +3,6 @@
   "item.fruitcraft.cherry": "Cherry",
   "item.fruitcraft.grapes" : "Grapes",
   "item.fruitcraft.lychee": "Lychee",
-  "item.fruitcraft.dragonfruit": "Dragonfruit"
+  "item.fruitcraft.dragonfruit": "Dragonfruit",
+  "block.fruitcraft.grape_crop_block": "Grapes Crop"
 }

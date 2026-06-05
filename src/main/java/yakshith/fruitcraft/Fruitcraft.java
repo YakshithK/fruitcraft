@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import yakshith.fruitcraft.items.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
 import yakshith.fruitcraft.items.ModItemGroups;
 
@@ -24,5 +25,6 @@ public class Fruitcraft implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroup();
+		ModBlocks.initialize();
 	}
 }
