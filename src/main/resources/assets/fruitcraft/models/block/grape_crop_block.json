@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "fruitcraft:block/grape_crop_block"
-  }
-}

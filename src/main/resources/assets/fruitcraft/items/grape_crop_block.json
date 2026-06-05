@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "fruitcraft:block/grape_crop_block"
+    "model": "fruitcraft:block/mango_crop"
   }
 }

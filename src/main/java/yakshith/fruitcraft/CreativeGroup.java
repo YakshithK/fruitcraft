@@ -10,8 +10,10 @@ import net.minecraft.world.item.CreativeModeTab;
 
 import net.minecraft.world.item.ItemStack;
 import yakshith.fruitcraft.Fruitcraft;
+import yakshith.fruitcraft.blocks.ModBlocks;
+import yakshith.fruitcraft.items.ModItems;
 
-public class ModItemGroups {
+public class CreativeGroup {
 
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "tab1")
@@ -26,6 +28,7 @@ public class ModItemGroups {
                 output.accept(ModItems.DRAGONFRUIT);
                 output.accept(ModItems.LYCHEE);
                 output.accept(ModItems.GRAPES);
+                //output.accept(ModBlocks.GRAPE_CROP);
             })
             .build();
 

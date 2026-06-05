@@ -8,12 +8,14 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import yakshith.fruitcraft.Fruitcraft;
+import yakshith.fruitcraft.blocks.ModBlocks;
 
 import java.util.function.Function;
 
@@ -33,6 +35,16 @@ public class ModItems {
             "mango",
             Item::new,
             new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build())
+    );
+
+    // MANGO SEEDS
+    public static final Item MANGO_SEEDS = register(
+            "mango_seeds",
+            props -> new BlockItem(
+                    ModBlocks.MANGO_CROP,
+                    props
+            ),
+            new Item.Properties()
     );
 
     // CHERRY
@@ -57,7 +69,6 @@ public class ModItems {
     );
 
     // DRAGONFRUIT
-
     public static final Consumable DRAGONFRUIT_CONSUMABLE = Consumables.defaultFood()
             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.LEVITATION, 6 * 20, 1), 1.0f))
             .build();
