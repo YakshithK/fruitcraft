@@ -5,9 +5,14 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import yakshith.fruitcraft.Fruitcraft;
 
 public class ModItems {
@@ -37,10 +42,22 @@ public class ModItems {
             .food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f).alwaysEdible().build()));
 
     // DRAGONFRUIT
+
+    public static final Consumable LEVITATION_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.LEVITATION, 6 * 20, 1), 1.0f))
+            .build();
+
+    public static final FoodProperties LEVITATION_COMPONENT = new FoodProperties.Builder()
+            .alwaysEdible()
+            .nutrition(6)
+            .saturationModifier(0.75f)
+            .alwaysEdible()
+            .build();
+
     public static final Identifier DRAGONFRUIT_ID = Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "dragonfruit");
     public static final ResourceKey<Item> DRAGONFRUIT_KEY = ResourceKey.create(Registries.ITEM, DRAGONFRUIT_ID);
     public static final Item DRAGONFRUIT = new Item(new Item.Properties().setId(DRAGONFRUIT_KEY)
-            .food(new FoodProperties.Builder().nutrition(6).saturationModifier(0.75f).alwaysEdible().build()));
+            .food(LEVITATION_COMPONENT, LEVITATION_CONSUMABLE));
 
     public static void registerModItems() {
         Fruitcraft.LOGGER.info("Registering Mod Items for " + Fruitcraft.MOD_ID);
