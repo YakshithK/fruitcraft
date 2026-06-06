@@ -24,11 +24,11 @@ public class CreativeGroup {
             .title(Component.translatable("Fruits"))
             .displayItems((params, output) -> {
                 output.accept(ModItems.MANGO);
+                output.accept(ModItems.MANGO_SEEDS);
                 output.accept(ModItems.CHERRY);
                 output.accept(ModItems.DRAGONFRUIT);
                 output.accept(ModItems.LYCHEE);
                 output.accept(ModItems.GRAPES);
-                //output.accept(ModBlocks.GRAPE_CROP);
             })
             .build();
 
