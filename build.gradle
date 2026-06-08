@@ -24,6 +24,15 @@ loom {
 		}
 	}
 
+	runs {
+		datagen {
+			client()
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${project.file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=fruitcraft"
+		}
+	}
 }
 
 dependencies {
@@ -34,7 +43,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	
+
 }
 
 processResources {
@@ -58,6 +67,14 @@ java {
 
 	sourceCompatibility = JavaVersion.VERSION_21
 	targetCompatibility = JavaVersion.VERSION_21
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDir "src/main/generated"
+		}
+	}
 }
 
 jar {

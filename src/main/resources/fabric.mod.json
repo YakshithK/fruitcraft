@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"yakshith.fruitcraft.client.FruitcraftClient"
+		],
+		"fabric-datagen": [
+			"yakshith.fruitcraft.datagen.FruitcraftDataGenerator"
 		]
 	},
 	"mixins": [
