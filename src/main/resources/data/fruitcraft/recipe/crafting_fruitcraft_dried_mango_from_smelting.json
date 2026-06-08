@@ -1,0 +1,13 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "crafting:fruitcraft_dried_mango_from_smelting"
+    },
+    "tags": [
+      "furnace"
+    ],
+    "input": "fruitcraft:mango",
+    "output": "fruitcraft:dried_mango"
+  }
+}

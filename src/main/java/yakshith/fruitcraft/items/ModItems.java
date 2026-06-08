@@ -47,6 +47,13 @@ public class ModItems {
             new Item.Properties()
     );
 
+    // DRIED MANGO
+    public static final Item DRIED_MANGO = register(
+            "dried_mango",
+            Item::new,
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationModifier(0.6f).build())
+    );
+
     // CHERRY
     public static final Item CHERRY = register(
             "cherry",
