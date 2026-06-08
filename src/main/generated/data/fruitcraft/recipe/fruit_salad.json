@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": "fruitcraft:lychee",
+    "b": "minecraft:bowl",
+    "f": "fruitcraft:mango",
+    "m": "fruitcraft:cherry"
+  },
+  "pattern": [
+    "fmf",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fruitcraft:fruit_salad"
+  }
+}

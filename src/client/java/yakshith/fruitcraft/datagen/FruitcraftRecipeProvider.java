@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import yakshith.fruitcraft.items.ModItems;
 
 import java.util.List;
@@ -34,6 +35,17 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         200,                              // cook time in ticks (10 sec)
                         "mango_drying"                    // group id
                 );
+
+                shaped(RecipeCategory.FOOD, ModItems.FRUIT_SALAD)
+                        .pattern("fmf")
+                        .pattern("aba")
+                        .define('f', ModItems.MANGO)
+                        .define('m', ModItems.CHERRY)
+                        .define('b', Items.BOWL)
+                        .define('a', ModItems.LYCHEE)
+                        .unlockedBy(getHasName(ModItems.MANGO), has(ModItems.MANGO))
+                        .save(output);
+
             }
         };
     }

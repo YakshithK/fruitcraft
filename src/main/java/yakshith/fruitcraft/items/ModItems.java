@@ -133,6 +133,12 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final Item FRUIT_SALAD = register(
+            "fruit_salad",
+            Item::new,
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationModifier(0.6f).build())
+    );
+
     public static void initialize() {
     }
 }

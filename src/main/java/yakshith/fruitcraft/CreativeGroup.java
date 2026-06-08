@@ -34,6 +34,7 @@ public class CreativeGroup {
                 output.accept(ModItems.LYCHEE_SEEDS);
                 output.accept(ModItems.GRAPES);
                 output.accept(ModItems.GRAPE_SEEDS);
+                output.accept(ModItems.FRUIT_SALAD);
             })
             .build();
 
