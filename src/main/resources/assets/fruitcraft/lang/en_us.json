@@ -1,9 +1,13 @@
 {
   "item.fruitcraft.mango" : "Mango",
+  "item.fruitcraft.mango_seeds": "Mango Seeds",
   "item.fruitcraft.cherry": "Cherry",
+  "item.fruitcraft.cherry_seeds": "Cherry Seeds",
   "item.fruitcraft.grapes" : "Grapes",
+  "item.fruitcraft.grape_seeds": "Grape Seeds",
   "item.fruitcraft.lychee": "Lychee",
+  "item.fruitcraft.lychee_seeds": "Lychee Seeds",
   "item.fruitcraft.dragonfruit": "Dragonfruit",
-  "block.fruitcraft.mango_crop": "Mango Crop",
-  "item.fruitcraft.mango_seeds": "Mango Seeds"
+  "item.fruitcraft.dragonfruit_seeds": "Dragonfruit Seeds"
+
 }

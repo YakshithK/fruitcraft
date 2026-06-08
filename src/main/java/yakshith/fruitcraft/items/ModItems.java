@@ -54,6 +54,16 @@ public class ModItems {
             new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f).build())
     );
 
+    // CHERRY SEEDS
+    public static final Item CHERRY_SEEDS = register(
+            "cherry_seeds",
+            props -> new BlockItem(
+                    ModBlocks.CHERRY_CROP,
+                    props
+            ),
+            new Item.Properties()
+    );
+
     // GRAPES
     public static final Item GRAPES = register(
             "grapes",
@@ -61,11 +71,31 @@ public class ModItems {
             new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.5f).build())
     );
 
+    // GRAPE SEEDS
+    public static final Item GRAPE_SEEDS = register(
+            "grape_seeds",
+            props -> new BlockItem(
+                    ModBlocks.GRAPE_CROP,
+                    props
+            ),
+            new Item.Properties()
+    );
+
     // LYCHEE
     public static final Item LYCHEE = register(
             "lychee",
             Item::new,
             new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f).build())
+    );
+
+    // LYCHEE SEEDS
+    public static final Item LYCHEE_SEEDS = register(
+            "lychee_seeds",
+            props -> new BlockItem(
+                    ModBlocks.LYCHEE_CROP,
+                    props
+            ),
+            new Item.Properties()
     );
 
     // DRAGONFRUIT
@@ -86,6 +116,15 @@ public class ModItems {
             new Item.Properties().food(DRAGONFRUIT_COMPONENT, DRAGONFRUIT_CONSUMABLE)
     );
 
+    // DRAGONFRUIT SEEDS
+    public static final Item DRAGONFRUIT_SEEDS = register(
+            "dragonfruit_seeds",
+            props -> new BlockItem(
+                    ModBlocks.DRAGONFRUIT_CROP,
+                    props
+            ),
+            new Item.Properties()
+    );
 
     public static void initialize() {
     }

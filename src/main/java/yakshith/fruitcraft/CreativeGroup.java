@@ -26,9 +26,13 @@ public class CreativeGroup {
                 output.accept(ModItems.MANGO);
                 output.accept(ModItems.MANGO_SEEDS);
                 output.accept(ModItems.CHERRY);
+                output.accept(ModItems.CHERRY_SEEDS);
                 output.accept(ModItems.DRAGONFRUIT);
+                output.accept(ModItems.DRAGONFRUIT_SEEDS);
                 output.accept(ModItems.LYCHEE);
+                output.accept(ModItems.LYCHEE_SEEDS);
                 output.accept(ModItems.GRAPES);
+                output.accept(ModItems.GRAPE_SEEDS);
             })
             .build();
 

@@ -49,6 +49,50 @@ public class ModBlocks {
             false
     );
 
+    public static final Block CHERRY_CROP = register(
+            "cherry_crop",
+            FruitCropBlock::new,
+            BlockBehaviour.Properties.of()
+                    .noCollision()
+                    .instabreak()
+                    .randomTicks()
+                    .noOcclusion(),
+            false
+    );
+
+    public static final Block GRAPE_CROP = register(
+            "grape_crop",
+            FruitCropBlock::new,
+            BlockBehaviour.Properties.of()
+                    .noCollision()
+                    .instabreak()
+                    .randomTicks()
+                    .noOcclusion(),
+            false
+    );
+
+    public static final Block LYCHEE_CROP = register(
+            "lychee_crop",
+            FruitCropBlock::new,
+            BlockBehaviour.Properties.of()
+                    .noCollision()
+                    .instabreak()
+                    .randomTicks()
+                    .noOcclusion(),
+            false
+    );
+
+    public static final Block DRAGONFRUIT_CROP = register(
+            "dragonfruit_crop",
+            FruitCropBlock::new,
+            BlockBehaviour.Properties.of()
+                    .noCollision()
+                    .instabreak()
+                    .randomTicks()
+                    .noOcclusion(),
+            false
+    );
+
     public static void initialize() {
 
     }
