@@ -31,10 +31,21 @@ public class ModItems {
     }
 
     // MANGO
+    public static final Consumable MANGO_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.GLOWING, 6 * 20, 1), 1.0f))
+            .build();
+
+    public static final FoodProperties MANGO_COMPONENT = new FoodProperties.Builder()
+            .alwaysEdible()
+            .nutrition(4)
+            .saturationModifier(0.6f)
+            .alwaysEdible()
+            .build();
+
     public static final Item MANGO = register(
             "mango",
             Item::new,
-            new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build())
+            new Item.Properties().food(MANGO_COMPONENT, MANGO_CONSUMABLE)
     );
 
     // MANGO SEEDS
@@ -55,10 +66,21 @@ public class ModItems {
     );
 
     // CHERRY
+    public static final Consumable CHERRY_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 6 * 20, 1), 1.0f))
+            .build();
+
+    public static final FoodProperties CHERRY_COMPONENT = new FoodProperties.Builder()
+            .alwaysEdible()
+            .nutrition(3)
+            .saturationModifier(0.5f)
+            .alwaysEdible()
+            .build();
+
     public static final Item CHERRY = register(
             "cherry",
             Item::new,
-            new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f).build())
+            new Item.Properties().food(CHERRY_COMPONENT, CHERRY_CONSUMABLE)
     );
 
     // CHERRY SEEDS
@@ -72,10 +94,21 @@ public class ModItems {
     );
 
     // GRAPES
+    public static final Consumable GRAPE_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 6 * 20, 1), 1.0f))
+            .build();
+
+    public static final FoodProperties GRAPE_COMPONENT = new FoodProperties.Builder()
+            .alwaysEdible()
+            .nutrition(3)
+            .saturationModifier(0.4f)
+            .alwaysEdible()
+            .build();
+
     public static final Item GRAPES = register(
             "grapes",
             Item::new,
-            new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.5f).build())
+            new Item.Properties().food(GRAPE_COMPONENT, GRAPE_CONSUMABLE)
     );
 
     // GRAPE SEEDS
@@ -89,10 +122,21 @@ public class ModItems {
     );
 
     // LYCHEE
+    public static final Consumable LYCHEE_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HASTE, 6 * 20, 1), 1.0f))
+            .build();
+
+    public static final FoodProperties LYCHEE_COMPONENT = new FoodProperties.Builder()
+            .alwaysEdible()
+            .nutrition(4)
+            .saturationModifier(0.5f)
+            .alwaysEdible()
+            .build();
+
     public static final Item LYCHEE = register(
             "lychee",
             Item::new,
-            new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f).build())
+            new Item.Properties().food(LYCHEE_COMPONENT, LYCHEE_CONSUMABLE)
     );
 
     // LYCHEE SEEDS
