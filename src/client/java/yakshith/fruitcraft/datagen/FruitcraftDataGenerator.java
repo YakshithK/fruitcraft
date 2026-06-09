@@ -8,5 +8,6 @@ public class FruitcraftDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(FruitcraftRecipeProvider::new);
+        pack.addProvider(FruitcraftAdvancementProvider::new);
     }
 }
