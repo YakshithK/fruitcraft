@@ -2,6 +2,10 @@ package yakshith.fruitcraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.Registries;
+import yakshith.fruitcraft.world.gen.FruitcraftConfiguredFeatures;
+import yakshith.fruitcraft.world.gen.FruitcraftPlacedFeatures;
 
 public class FruitcraftDataGenerator implements DataGeneratorEntrypoint {
     @Override
@@ -9,5 +13,11 @@ public class FruitcraftDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(FruitcraftRecipeProvider::new);
         pack.addProvider(FruitcraftAdvancementProvider::new);
+    }
+
+    @Override
+    public void buildRegistry(RegistrySetBuilder builder) {
+        builder.add(Registries.CONFIGURED_FEATURE, FruitcraftConfiguredFeatures::bootstrap);
+        builder.add(Registries.PLACED_FEATURE, FruitcraftPlacedFeatures::bootstrap);
     }
 }

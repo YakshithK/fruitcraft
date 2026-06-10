@@ -30,7 +30,7 @@ public class ModBlocks {
         }
 
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
-    };
+    }
 
     private static ResourceKey<Block> keyOfBlock(String name) {
         return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, name));
@@ -52,8 +52,7 @@ public class ModBlocks {
     // MANGO LEAVES
     public static final Block MANGO_LEAVES = register(
             "mango_leaves",
-            props -> new LeavesBlock(props) {
-            },
+            MangoLeavesBlock::new,
             BlockBehaviour.Properties.of()
                     .strength(0.2F)
                     .noOcclusion()

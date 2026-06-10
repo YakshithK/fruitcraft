@@ -8,10 +8,10 @@ import yakshith.fruitcraft.world.gen.FruitcraftPlacedFeatures;
 
 public class FruitcraftTreeGeneration {
     public static void generateTrees() {
-        BiomeModifications.addFeature(
-                BiomeSelectors.foundInOverworld(),
-                GenerationStep.Decoration.VEGETAL_DECORATION,
-                FruitcraftPlacedFeatures.MANGO_TREE_PLACED_KEY
-        );
+//        BiomeModifications.addFeature(
+//                BiomeSelectors.foundInOverworld(),
+//                GenerationStep.Decoration.VEGETAL_DECORATION,
+//                FruitcraftPlacedFeatures.MANGO_TREE_PLACED_KEY
+//        );
     }
 }

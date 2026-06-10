@@ -27,7 +27,7 @@ public class CreativeGroup {
                 output.accept(ModItems.DRIED_MANGO);
                 output.accept(ModBlocks.MANGO_SAPLING);
                 output.accept(ModBlocks.MANGO_LEAVES);
-                output.accept(ModBlocks.MANGO_LEAVES);
+                output.accept(ModBlocks.MANGO_LOG);
                 output.accept(ModItems.CHERRY);
                 output.accept(ModItems.CHERRY_SEEDS);
                 output.accept(ModItems.DRAGONFRUIT);

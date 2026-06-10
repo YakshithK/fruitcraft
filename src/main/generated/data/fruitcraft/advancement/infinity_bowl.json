@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "infinity_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fruitcraft:fruit_salad"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Snap your fingers and all fruits will cease to exist",
+    "icon": {
+      "count": 1,
+      "id": "fruitcraft:fruit_salad"
+    },
+    "title": "Infinity Bowl"
+  },
+  "requirements": [
+    [
+      "infinity_bowl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,10 +1,9 @@
 {
   "item.fruitcraft.mango" : "Mango",
   "item.fruitcraft.dried_mango": "Dried Mango",
-  "block.mangomod.mango_log": "Mango Log",
-  "block.mangomod.mango_leaves": "Mango Leaves",
-  "block.mangomod.mango_sapling": "Mango Sapling",
-  "item.mangomod.mango": "Mango",
+  "block.fruitcraft.mango_log": "Mango Log",
+  "block.fruitcraft.mango_leaves": "Mango Leaves",
+  "block.fruitcraft.mango_sapling": "Mango Sapling",
   "item.fruitcraft.cherry": "Cherry",
   "item.fruitcraft.cherry_seeds": "Cherry Seeds",
   "item.fruitcraft.grapes" : "Grapes",

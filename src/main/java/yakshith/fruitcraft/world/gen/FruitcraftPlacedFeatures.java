@@ -17,21 +17,27 @@ import java.util.List;
 
 public class FruitcraftPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> MANGO_TREE_PLACED_KEY = ResourceKey.create(Registries.PLACED_FEATURE,
-            Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "mango_tree_placed"));
-
+    public static final ResourceKey<PlacedFeature> MANGO_TREE_PLACED_KEY =
+            ResourceKey.create(
+                    Registries.PLACED_FEATURE,
+                    Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "mango_tree_placed")
+            );
     public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        context.register(MANGO_TREE_PLACED_KEY, new PlacedFeature(
-                configuredFeatures.getOrThrow(FruitcraftConfiguredFeatures.MANGO_TREE_KEY),
-                List.of(CountPlacement.of(3),
-                InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
-                BiomeFilter.biome())
-        ));
+        context.register(
+                MANGO_TREE_PLACED_KEY,
+                new PlacedFeature(
+                        configuredFeatures.getOrThrow(FruitcraftConfiguredFeatures.MANGO_TREE_KEY),
+                        List.of(
+                                CountPlacement.of(3),
+                                InSquarePlacement.spread(),
+                                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                                BiomeFilter.biome()
+                        )
+                )
+        );
     }
 
-    public static void initialize() {}
-
+    public static void initialize() {};
 }
