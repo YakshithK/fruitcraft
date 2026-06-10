@@ -1,0 +1,6 @@
+{
+  "parents": "minecraft:block/cross",
+  "textures": {
+    "cross": "fruitcraft:block/mango_sapling"
+  }
+}

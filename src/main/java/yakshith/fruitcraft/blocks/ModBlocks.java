@@ -8,6 +8,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import yakshith.fruitcraft.Fruitcraft;
 
@@ -37,6 +39,38 @@ public class ModBlocks {
     private static ResourceKey<Item> keyOfItem(String name) {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, name));
     }
+
+    // MANGO LOG
+    public static final Block MANGO_LOG = register(
+            "mango_log",
+            props -> new
+                    net.minecraft.world.level.block.RotatedPillarBlock(props),
+            BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0F).ignitedByLava(),
+            true
+    );
+
+    // MANGO LEAVES
+    public static final Block MANGO_LEAVES = register(
+            "mango_leaves",
+            props -> new LeavesBlock(props) {
+            },
+            BlockBehaviour.Properties.of()
+                    .strength(0.2F)
+                    .noOcclusion()
+                    .sound(SoundType.GRASS),
+            true
+    );
+
+    // MANGO SAPLING
+    public static final Block MANGO_SAPLING = register(
+            "mango_sapling",
+            props -> new MangoSaplingBlock(props),
+            BlockBehaviour.Properties.of()
+                    .noCollision()
+                    .instabreak()
+                    .sound(SoundType.GRASS),
+            true
+    );
 
     public static final Block CHERRY_CROP = register(
             "cherry_crop",

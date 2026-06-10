@@ -7,6 +7,10 @@ import org.slf4j.LoggerFactory;
 import yakshith.fruitcraft.blocks.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
 import yakshith.fruitcraft.CreativeGroup;
+import yakshith.fruitcraft.world.gen.FruitcraftConfiguredFeatures;
+import yakshith.fruitcraft.world.gen.FruitcraftPlacedFeatures;
+import yakshith.fruitcraft.world.gen.tree.FruitcraftTreeGeneration;
+import yakshith.fruitcraft.world.gen.tree.FruitcraftTreeGrowers;
 
 public class Fruitcraft implements ModInitializer {
 	public static final String MOD_ID = "fruitcraft";
@@ -25,6 +29,10 @@ public class Fruitcraft implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.initialize();
 		ModBlocks.initialize();
+		FruitcraftTreeGrowers.initialize();
+		FruitcraftConfiguredFeatures.initialize();
+		FruitcraftPlacedFeatures.initialize();
+		FruitcraftTreeGeneration.generateTrees();
 		CreativeGroup.registerModItemGroup();
 	}
 }

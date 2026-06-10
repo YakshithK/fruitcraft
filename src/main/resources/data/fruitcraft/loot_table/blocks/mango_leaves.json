@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitcraft:mango_sapling",
+          "conditions": [
+            { "condition":  "minecraft:survives_explosion"},
+            {
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune",
+              "chances": [0.05, 0.0625, 0.08333336, 0.1]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitcraft:mango",
+          "conditions": [
+            { "condition":  "minecraft:survives_explosion"},
+            {
+              "condition": "minecraft:random_change",
+              "chance": 0.05
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
