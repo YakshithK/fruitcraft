@@ -24,7 +24,6 @@ public class CreativeGroup {
             .title(Component.translatable("Fruits"))
             .displayItems((params, output) -> {
                 output.accept(ModItems.MANGO);
-                output.accept(ModItems.MANGO_SEEDS);
                 output.accept(ModItems.DRIED_MANGO);
                 output.accept(ModItems.CHERRY);
                 output.accept(ModItems.CHERRY_SEEDS);

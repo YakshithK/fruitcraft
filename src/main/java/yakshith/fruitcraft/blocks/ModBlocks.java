@@ -38,17 +38,6 @@ public class ModBlocks {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, name));
     }
 
-    public static final Block MANGO_CROP = register(
-            "mango_crop",
-            FruitCropBlock::new,
-            BlockBehaviour.Properties.of()
-                    .noCollision()
-                    .instabreak()
-                    .randomTicks()
-                    .noOcclusion(),
-            false
-    );
-
     public static final Block CHERRY_CROP = register(
             "cherry_crop",
             FruitCropBlock::new,

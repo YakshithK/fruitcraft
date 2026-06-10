@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "age=0,height=2":  { "model": "fruitcraft:block/mango_crop_stage0" },
-    "age=1,height=5": { "model": "fruitcraft:block/mango_crop_stage1" },
-    "age=2,height=6": { "model": "fruitcraft:block/mango_crop_stage2" },
-    "age=3,height=7": { "model": "fruitcraft:block/mango_crop_stage3" }
-  }
-}

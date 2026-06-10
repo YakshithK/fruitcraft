@@ -48,16 +48,6 @@ public class ModItems {
             new Item.Properties().food(MANGO_COMPONENT, MANGO_CONSUMABLE)
     );
 
-    // MANGO SEEDS
-    public static final Item MANGO_SEEDS = register(
-            "mango_seeds",
-            props -> new BlockItem(
-                    ModBlocks.MANGO_CROP,
-                    props
-            ),
-            new Item.Properties()
-    );
-
     // DRIED MANGO
     public static final Item DRIED_MANGO = register(
             "dried_mango",
