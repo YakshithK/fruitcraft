@@ -6,10 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import yakshith.fruitcraft.blocks.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
-import yakshith.fruitcraft.CreativeGroup;
 import yakshith.fruitcraft.world.gen.FruitcraftConfiguredFeatures;
 import yakshith.fruitcraft.world.gen.FruitcraftPlacedFeatures;
-import yakshith.fruitcraft.world.gen.tree.FruitcraftTreeGeneration;
 import yakshith.fruitcraft.world.gen.tree.FruitcraftTreeGrowers;
 
 public class Fruitcraft implements ModInitializer {
@@ -32,7 +30,6 @@ public class Fruitcraft implements ModInitializer {
 		FruitcraftTreeGrowers.initialize();
 		FruitcraftConfiguredFeatures.initialize();
 		FruitcraftPlacedFeatures.initialize();
-		FruitcraftTreeGeneration.generateTrees();
 		CreativeGroup.registerModItemGroup();
 	}
 }
