@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "fruitcraft:mango_log"
+    "fruitcraft:mango_log",
+    "fruitcraft:mango_wood"
   ]
 }

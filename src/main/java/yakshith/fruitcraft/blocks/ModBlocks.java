@@ -67,6 +67,7 @@ public class ModBlocks {
             BlockBehaviour.Properties.of()
                     .noCollision()
                     .instabreak()
+                    .randomTicks()
                     .sound(SoundType.GRASS),
             true
     );
@@ -78,6 +79,17 @@ public class ModBlocks {
             BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
                     .strength(2.0F, 3.0F)
+                    .ignitedByLava(),
+            true
+    );
+
+    // MANGO WOOD
+    public static final Block MANGO_WOOD = register(
+            "mango_wood",
+            props -> new net.minecraft.world.level.block.RotatedPillarBlock(props),
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .strength(2.0F)
                     .ignitedByLava(),
             true
     );

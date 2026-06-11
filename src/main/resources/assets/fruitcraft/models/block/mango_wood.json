@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "all": "fruitcraft:block/mango_log"
+  }
+}

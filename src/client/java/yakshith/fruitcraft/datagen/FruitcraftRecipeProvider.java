@@ -52,6 +52,14 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .group("planks")
                         .unlockedBy(getHasName(ModBlocks.MANGO_LOG.asItem()), has(ModBlocks.MANGO_LOG.asItem()))
                         .save(output);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGO_WOOD.asItem(), 3)
+                        .pattern("LL")
+                        .pattern("LL")
+                        .define("L", ModBlocks.MANGO_LOG.asItem())
+                        .group("bark")
+                        .unlockedBy(getHasName(ModBlocks.MANGO_LOG.asItem()), has(ModBlocks.MANGO_LOG.asItem()))
+                        .save(output);
             }
         };
     }
