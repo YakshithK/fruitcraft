@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import yakshith.fruitcraft.blocks.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
 
 import java.util.List;
@@ -46,6 +47,11 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.MANGO), has(ModItems.MANGO))
                         .save(output);
 
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGO_PLANKS.asItem(), 4)
+                        .requires(ModBlocks.MANGO_LOG.asItem())
+                        .group("planks")
+                        .unlockedBy(getHasName(ModBlocks.MANGO_LOG.asItem()), has(ModBlocks.MANGO_LOG.asItem()))
+                        .save(output);
             }
         };
     }

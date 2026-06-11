@@ -71,6 +71,17 @@ public class ModBlocks {
             true
     );
 
+    // MANGO PLANKS
+    public static final Block MANGO_PLANKS = register(
+            "mango_planks",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .strength(2.0F, 3.0F)
+                    .ignitedByLava(),
+            true
+    );
+
     public static final Block CHERRY_CROP = register(
             "cherry_crop",
             FruitCropBlock::new,
