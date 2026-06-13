@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": {"model":  "fruitcraft:block/stripped_mango_log"},
+    "axis=x": {"model":  "fruitcraft:block/stripped_mango_log", "x": 90, "y":  90},
+    "axis=z": {"model":  "fruitcraft:block/stripped_mango_log", "x": 90}
+  }
+}

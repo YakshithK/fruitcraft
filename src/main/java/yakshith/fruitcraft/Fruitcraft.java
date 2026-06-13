@@ -2,6 +2,10 @@ package yakshith.fruitcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import yakshith.fruitcraft.blocks.ModBlocks;
@@ -27,9 +31,17 @@ public class Fruitcraft implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.initialize();
 		ModBlocks.initialize();
+		StrippableBlockRegistry.register(ModBlocks.MANGO_LOG, ModBlocks.STRIPPED_MANGO_LOG);
 		FruitcraftTreeGrowers.initialize();
 		FruitcraftConfiguredFeatures.initialize();
 		FruitcraftPlacedFeatures.initialize();
+
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInOverworld(),
+				GenerationStep.Decoration.VEGETAL_DECORATION,
+				FruitcraftPlacedFeatures.MANGO_TREE_PLACED_KEY
+		);
+
 		CreativeGroup.registerModItemGroup();
 	}
 }

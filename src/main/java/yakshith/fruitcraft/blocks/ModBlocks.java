@@ -94,6 +94,17 @@ public class ModBlocks {
             true
     );
 
+    // STRIPPED MANGO LOG
+    public static final Block STRIPPED_MANGO_LOG = register(
+            "stripped_mango_log",
+            props -> new net.minecraft.world.level.block.RotatedPillarBlock(props),
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .strength(2.0F)
+                    .ignitedByLava(),
+            true
+    );
+
     public static final Block CHERRY_CROP = register(
             "cherry_crop",
             FruitCropBlock::new,
