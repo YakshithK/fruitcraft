@@ -3,14 +3,10 @@
 	"id": "fruitcraft",
 	"version": "${version}",
 	"name": "Fruitcraft",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds tropical fruit trees, crops, and food to Minecraft. Grow mangoes, cherries, grapes, lychees, and dragonfruits — each with unique effects.",
 	"authors": [
-		"Me!"
+		"Yakshith"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
 	"license": "CC0-1.0",
 	"icon": "assets/fruitcraft/icon.png",
 	"environment": "*",
