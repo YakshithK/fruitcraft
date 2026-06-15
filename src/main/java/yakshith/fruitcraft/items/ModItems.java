@@ -30,31 +30,6 @@ public class ModItems {
         return item;
     }
 
-    // MANGO
-    public static final Consumable MANGO_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.GLOWING, 30 * 20, 1), 1.0f))
-            .build();
-
-    public static final FoodProperties MANGO_COMPONENT = new FoodProperties.Builder()
-            .alwaysEdible()
-            .nutrition(4)
-            .saturationModifier(0.6f)
-            .alwaysEdible()
-            .build();
-
-    public static final Item MANGO = register(
-            "mango",
-            Item::new,
-            new Item.Properties().food(MANGO_COMPONENT, MANGO_CONSUMABLE)
-    );
-
-    // DRIED MANGO
-    public static final Item DRIED_MANGO = register(
-            "dried_mango",
-            Item::new,
-            new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationModifier(0.6f).build())
-    );
-
     // CHERRY
     public static final Consumable CHERRY_CONSUMABLE = Consumables.defaultFood()
             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 30 * 20, 1), 1.0f))

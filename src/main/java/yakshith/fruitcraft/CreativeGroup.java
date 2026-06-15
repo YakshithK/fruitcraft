@@ -10,7 +10,9 @@ import net.minecraft.world.item.CreativeModeTab;
 
 import net.minecraft.world.item.ItemStack;
 import yakshith.fruitcraft.Fruitcraft;
+import yakshith.fruitcraft.blocks.MangoBlocks;
 import yakshith.fruitcraft.blocks.ModBlocks;
+import yakshith.fruitcraft.items.MangoItems;
 import yakshith.fruitcraft.items.ModItems;
 
 public class CreativeGroup {
@@ -20,15 +22,15 @@ public class CreativeGroup {
     );
 
     public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModItems.MANGO))
+            .icon(() -> new ItemStack(MangoItems.MANGO))
             .title(Component.translatable("Fruits"))
             .displayItems((params, output) -> {
-                output.accept(ModItems.MANGO);
-                output.accept(ModItems.DRIED_MANGO);
-                output.accept(ModBlocks.MANGO_SAPLING);
-                output.accept(ModBlocks.MANGO_LEAVES);
-                output.accept(ModBlocks.MANGO_LOG);
-                output.accept(ModBlocks.MANGO_PLANKS);
+                output.accept(MangoItems.MANGO);
+                output.accept(MangoItems.DRIED_MANGO);
+                output.accept(MangoBlocks.MANGO_SAPLING);
+                output.accept(MangoBlocks.MANGO_LEAVES);
+                output.accept(MangoBlocks.MANGO_LOG);
+                output.accept(MangoBlocks.MANGO_PLANKS);
                 output.accept(ModItems.CHERRY);
                 output.accept(ModItems.CHERRY_SEEDS);
                 output.accept(ModItems.DRAGONFRUIT);

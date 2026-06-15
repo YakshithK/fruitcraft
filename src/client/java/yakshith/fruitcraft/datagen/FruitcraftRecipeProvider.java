@@ -48,7 +48,7 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
 
                 shaped(RecipeCategory.FOOD, ModItems.FRUIT_SALAD)
                         .pattern("fmf")
-                        .pattern("dbd")
+                        .pattern("dad")
                         .pattern(" b ")
                         .define('f', ModItems.MANGO)
                         .define('m', ModItems.CHERRY)

@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import yakshith.fruitcraft.items.MangoItems;
+import yakshith.fruitcraft.blocks.MangoBlocks;
 import yakshith.fruitcraft.blocks.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
 import yakshith.fruitcraft.world.gen.FruitcraftConfiguredFeatures;
@@ -31,8 +33,10 @@ public class Fruitcraft implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		ModItems.initialize();
+		MangoItems.initialize();
 		ModBlocks.initialize();
-		StrippableBlockRegistry.register(ModBlocks.MANGO_LOG, ModBlocks.STRIPPED_MANGO_LOG);
+		MangoItems.initialize();
+		StrippableBlockRegistry.register(MangoBlocks.MANGO_LOG, MangoBlocks.STRIPPED_MANGO_LOG);
 		FruitcraftTreeGrowers.initialize();
 		FruitcraftConfiguredFeatures.initialize();
 		FruitcraftPlacedFeatures.initialize();
