@@ -12,7 +12,7 @@ import yakshith.fruitcraft.blocks.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
 import yakshith.fruitcraft.world.gen.FruitcraftConfiguredFeatures;
 import yakshith.fruitcraft.world.gen.FruitcraftPlacedFeatures;
-import yakshith.fruitcraft.world.gen.ModLootTableModifiers;
+import yakshith.fruitcraft.world.ModLootTableModifiers;
 import yakshith.fruitcraft.world.gen.tree.FruitcraftTreeGrowers;
 
 public class Fruitcraft implements ModInitializer {

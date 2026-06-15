@@ -12,7 +12,7 @@
 
 ## Phase 1: Polish & Fix Existing Content
 
-- [ ] **Potion effect durations are 6 seconds — way too short.** Bump to 30s minimum, 60s for rarer fruits (dragonfruit levitation at 60s would be terrifying and fun)
+- [x] **Potion effect durations are 6 seconds — way too short.** Bump to 30s minimum, 60s for rarer fruits (dragonfruit levitation at 60s would be terrifying and fun)
 - [ ] **First seeds problem**: player has no way to get the first cherry/grape/lychee/dragonfruit seeds except from crops that don't exist yet. Add seeds to dungeon loot tables, or let wandering trader sell them, or drop from tall grass
 - [ ] **Fruit salad recipe is incomplete**: only uses mango, cherry, lychee — grapes and dragonfruit are items but not in any recipe. Add them or update the salad
 - [ ] **Composter support**: add all fruits, seeds, and mango leaves to minecraft:blocks/compostable and minecraft:items/compostable tags
