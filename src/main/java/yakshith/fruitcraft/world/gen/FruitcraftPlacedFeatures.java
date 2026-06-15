@@ -30,7 +30,7 @@ public class FruitcraftPlacedFeatures {
                 new PlacedFeature(
                         configuredFeatures.getOrThrow(FruitcraftConfiguredFeatures.MANGO_TREE_KEY),
                         List.of(
-                                CountPlacement.of(3),
+                                CountPlacement.of(1),
                                 InSquarePlacement.spread(),
                                 PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                                 BiomeFilter.biome()

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "fruitcraft:mango",
+    "fruitcraft:cherry",
+    "fruitcraft:grapes",
+    "fruitcraft:lychee",
+    "fruitcraft:dragonfruit",
+    "fruitcraft:mango_leaves",
+    "fruitcraft:cherry_seeds",
+    "fruitcraft:grape_seeds",
+    "fruitcraft:lychee_seeds",
+    "fruitcraft:dragonfruit_seeds"
+  ]
+}

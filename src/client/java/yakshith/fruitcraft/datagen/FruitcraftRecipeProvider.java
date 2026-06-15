@@ -37,13 +37,24 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         "mango_drying"                    // group id
                 );
 
+                oreBlasting(
+                        List.of(ModItems.MANGO),
+                        RecipeCategory.FOOD,
+                        ModItems.DRIED_MANGO,
+                        0.35f,
+                        100,
+                        "mango_drying"
+                );
+
                 shaped(RecipeCategory.FOOD, ModItems.FRUIT_SALAD)
                         .pattern("fmf")
-                        .pattern("aba")
+                        .pattern("dbd")
+                        .pattern(" b ")
                         .define('f', ModItems.MANGO)
                         .define('m', ModItems.CHERRY)
                         .define('b', Items.BOWL)
                         .define('a', ModItems.LYCHEE)
+                        .define('d', ModItems.DRAGONFRUIT)
                         .unlockedBy(getHasName(ModItems.MANGO), has(ModItems.MANGO))
                         .save(output);
 
