@@ -32,7 +32,7 @@ public class ModItems {
 
     // MANGO
     public static final Consumable MANGO_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.GLOWING, 6 * 20, 1), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.GLOWING, 30 * 20, 1), 1.0f))
             .build();
 
     public static final FoodProperties MANGO_COMPONENT = new FoodProperties.Builder()
@@ -57,7 +57,7 @@ public class ModItems {
 
     // CHERRY
     public static final Consumable CHERRY_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 6 * 20, 1), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 30 * 20, 1), 1.0f))
             .build();
 
     public static final FoodProperties CHERRY_COMPONENT = new FoodProperties.Builder()
@@ -85,7 +85,7 @@ public class ModItems {
 
     // GRAPES
     public static final Consumable GRAPE_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 6 * 20, 1), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 60 * 20, 1), 1.0f))
             .build();
 
     public static final FoodProperties GRAPE_COMPONENT = new FoodProperties.Builder()
@@ -113,7 +113,7 @@ public class ModItems {
 
     // LYCHEE
     public static final Consumable LYCHEE_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HASTE, 6 * 20, 1), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HASTE, 30 * 20, 1), 1.0f))
             .build();
 
     public static final FoodProperties LYCHEE_COMPONENT = new FoodProperties.Builder()
@@ -141,7 +141,7 @@ public class ModItems {
 
     // DRAGONFRUIT
     public static final Consumable DRAGONFRUIT_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.LEVITATION, 6 * 20, 1), 1.0f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.LEVITATION, 10 * 20, 1), 1.0f))
             .build();
 
     public static final FoodProperties DRAGONFRUIT_COMPONENT = new FoodProperties.Builder()
