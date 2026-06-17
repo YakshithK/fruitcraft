@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "fruitcraft:item/cherry_seeds"
+    "model": "fruitcraft:block/mango_stairs"
   }
 }

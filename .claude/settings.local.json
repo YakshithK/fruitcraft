@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log *)",
+      "Bash(xargs grep -l \"grow\\\\|Grow\\\\|Tree\\\\|tree\")",
+      "Read(//c/tmp/**)",
+      "Bash(jar xf *)",
+      "Bash(find . -name \"FabricDynamic*.class\")",
+      "Bash(javap -p ./net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider.class)",
+      "Bash(jar tf *)",
+      "Bash(javap -p net/minecraft/world/level/storage/loot/BuiltInLootTables.class)",
+      "Bash(javap -p /tmp/net/minecraft/world/level/storage/loot/BuiltInLootTables.class)",
+      "Bash(xargs cat)",
+      "Bash(javap -p net/minecraft/world/level/block/state/BlockBehaviour.class)",
+      "Skill(context-restore)",
+      "Bash(xargs grep -l \"Client\\\\|DataGen\")"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 package yakshith.fruitcraft.blocks;
 
+import com.mojang.datafixers.types.Func;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -7,8 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import yakshith.fruitcraft.Fruitcraft;
 
@@ -42,8 +42,7 @@ public class MangoBlocks {
     // MANGO LOG
     public static final Block MANGO_LOG = register(
             "mango_log",
-            props -> new
-                    net.minecraft.world.level.block.RotatedPillarBlock(props),
+            RotatedPillarBlock::new,
             BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0F).ignitedByLava(),
             true
     );
@@ -62,7 +61,7 @@ public class MangoBlocks {
     // MANGO SAPLING
     public static final Block MANGO_SAPLING = register(
             "mango_sapling",
-            props -> new MangoSaplingBlock(props),
+            MangoSaplingBlock::new,
             BlockBehaviour.Properties.of()
                     .noCollision()
                     .instabreak()
@@ -85,7 +84,7 @@ public class MangoBlocks {
     // MANGO WOOD
     public static final Block MANGO_WOOD = register(
             "mango_wood",
-            props -> new net.minecraft.world.level.block.RotatedPillarBlock(props),
+            RotatedPillarBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
                     .strength(2.0F)
@@ -96,11 +95,24 @@ public class MangoBlocks {
     // STRIPPED MANGO LOG
     public static final Block STRIPPED_MANGO_LOG = register(
             "stripped_mango_log",
-            props -> new net.minecraft.world.level.block.RotatedPillarBlock(props),
+            RotatedPillarBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
                     .strength(2.0F)
                     .ignitedByLava(),
+            true
+    );
+
+    public static final Block MANGO_STAIRS = register(
+            "mango_stairs",
+            settings -> new StairBlock(
+                    MANGO_PLANKS.defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.WOOD)
+                            .strength(2.0F)
+                            .ignitedByLava()
+            ),
+            BlockBehaviour.Properties.of(),
             true
     );
 
