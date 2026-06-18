@@ -1,6 +1,5 @@
 package yakshith.fruitcraft.blocks;
 
-import com.mojang.datafixers.types.Func;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -107,12 +106,12 @@ public class MangoBlocks {
             "mango_stairs",
             settings -> new StairBlock(
                     MANGO_PLANKS.defaultBlockState(),
-                    BlockBehaviour.Properties.of()
-                            .sound(SoundType.WOOD)
-                            .strength(2.0F)
-                            .ignitedByLava()
+                    settings
             ),
-            BlockBehaviour.Properties.of(),
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .strength(2.0F)
+                    .ignitedByLava(),
             true
     );
 

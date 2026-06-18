@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import yakshith.fruitcraft.Fruitcraft;
+import yakshith.fruitcraft.blocks.MangoBlocks;
 import yakshith.fruitcraft.blocks.ModBlocks;
 
 public class FruitcraftConfiguredFeatures {
@@ -22,9 +23,9 @@ public class FruitcraftConfiguredFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
         TreeConfiguration mangoTreeConfig = new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.MANGO_LOG.defaultBlockState()),
+                BlockStateProvider.simple(MangoBlocks.MANGO_LOG.defaultBlockState()),
                 new StraightTrunkPlacer(5, 2, 0), //base height, random height, extra
-                BlockStateProvider.simple(ModBlocks.MANGO_LEAVES.defaultBlockState()),
+                BlockStateProvider.simple(MangoBlocks.MANGO_LEAVES.defaultBlockState()),
                 new BlobFoliagePlacer(ConstantInt.of(2),
                         ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)

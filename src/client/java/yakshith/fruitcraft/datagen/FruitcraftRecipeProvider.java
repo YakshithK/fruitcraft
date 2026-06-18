@@ -9,7 +9,9 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import yakshith.fruitcraft.blocks.MangoBlocks;
 import yakshith.fruitcraft.blocks.ModBlocks;
+import yakshith.fruitcraft.items.MangoItems;
 import yakshith.fruitcraft.items.ModItems;
 
 import java.util.List;
@@ -29,18 +31,18 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
 
                 // Mango -> Dried Mango furnace recipe
                 oreSmelting(
-                        List.of(ModItems.MANGO),          // inputs
+                        List.of(MangoItems.MANGO),          // inputs
                         RecipeCategory.FOOD,              // category in the recipe book
-                        ModItems.DRIED_MANGO,   // output (or ModItems.DRIED_MANGO)
+                        MangoItems.DRIED_MANGO,   // output (or ModItems.DRIED_MANGO)
                         0.35f,                            // exp
                         200,                              // cook time in ticks (10 sec)
                         "mango_drying"                    // group id
                 );
 
                 oreBlasting(
-                        List.of(ModItems.MANGO),
+                        List.of(MangoItems.MANGO),
                         RecipeCategory.FOOD,
-                        ModItems.DRIED_MANGO,
+                        MangoItems.DRIED_MANGO,
                         0.35f,
                         100,
                         "mango_drying"
@@ -50,26 +52,26 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .pattern("fmf")
                         .pattern("dad")
                         .pattern(" b ")
-                        .define('f', ModItems.MANGO)
+                        .define('f', MangoItems.MANGO)
                         .define('m', ModItems.CHERRY)
                         .define('b', Items.BOWL)
                         .define('a', ModItems.LYCHEE)
                         .define('d', ModItems.DRAGONFRUIT)
-                        .unlockedBy(getHasName(ModItems.MANGO), has(ModItems.MANGO))
+                        .unlockedBy(getHasName(MangoItems.MANGO), has(MangoItems.MANGO))
                         .save(output);
 
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGO_PLANKS.asItem(), 4)
-                        .requires(ModBlocks.MANGO_LOG.asItem())
+                shapeless(RecipeCategory.BUILDING_BLOCKS, MangoBlocks.MANGO_PLANKS.asItem(), 4)
+                        .requires(MangoBlocks.MANGO_LOG.asItem())
                         .group("planks")
-                        .unlockedBy(getHasName(ModBlocks.MANGO_LOG.asItem()), has(ModBlocks.MANGO_LOG.asItem()))
+                        .unlockedBy(getHasName(MangoBlocks.MANGO_LOG.asItem()), has(MangoBlocks.MANGO_LOG.asItem()))
                         .save(output);
 
-                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANGO_WOOD.asItem(), 3)
+                shaped(RecipeCategory.BUILDING_BLOCKS, MangoBlocks.MANGO_WOOD.asItem(), 3)
                         .pattern("LL")
                         .pattern("LL")
-                        .define('L', ModBlocks.MANGO_LOG.asItem())
+                        .define('L', MangoBlocks.MANGO_LOG.asItem())
                         .group("bark")
-                        .unlockedBy(getHasName(ModBlocks.MANGO_LOG.asItem()), has(ModBlocks.MANGO_LOG.asItem()))
+                        .unlockedBy(getHasName(MangoBlocks.MANGO_LOG.asItem()), has(MangoBlocks.MANGO_LOG.asItem()))
                         .save(output);
             }
         };
