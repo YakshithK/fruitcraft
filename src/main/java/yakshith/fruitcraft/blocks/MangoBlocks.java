@@ -9,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import yakshith.fruitcraft.Fruitcraft;
 
 import java.util.function.Function;
@@ -131,6 +132,14 @@ public class MangoBlocks {
     public static final Block MANGO_FENCE = register(
             "mango_fence",
             FenceBlock::new,
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS),
+            true
+    );
+
+    // MANGO FENCE GATE
+    public static final Block MANGO_FENCE_GATE = register(
+            "mango_fence_gate",
+            settings -> new FenceGateBlock(WoodType.OAK, settings),
             BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS),
             true
     );
