@@ -102,12 +102,24 @@ public class MangoBlocks {
             true
     );
 
+    // MANGO STAIRS
     public static final Block MANGO_STAIRS = register(
             "mango_stairs",
             settings -> new StairBlock(
                     MANGO_PLANKS.defaultBlockState(),
                     settings
             ),
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .strength(2.0F)
+                    .ignitedByLava(),
+            true
+    );
+
+    // MANGO STAIRS
+    public static final Block MANGO_SLAB = register(
+            "mango_slab",
+            SlabBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
                     .strength(2.0F)

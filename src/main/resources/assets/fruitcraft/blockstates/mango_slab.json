@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fruitcraft:block/mango_slab"
+    },
+    "type=top": {
+      "model": "fruitcraft:block/mango_slab_top"
+    },
+    "type=double": {
+      "model": "fruitcraft:block/mango_planks"
+    }
+  }
+}
