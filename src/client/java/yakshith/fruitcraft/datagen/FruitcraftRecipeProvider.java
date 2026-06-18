@@ -89,6 +89,15 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .group("wooden_slab")
                         .unlockedBy(getHasName(MangoBlocks.MANGO_PLANKS.asItem()), has(MangoBlocks.MANGO_PLANKS.asItem()))
                         .save(output);
+
+                shaped(RecipeCategory.DECORATIONS, MangoBlocks.MANGO_FENCE.asItem(), 3)
+                        .pattern("PSP")
+                        .pattern("PSP")
+                        .define('P', MangoBlocks.MANGO_PLANKS.asItem())
+                        .define('S', Items.STICK)
+                        .group("wooden_fence")
+                        .unlockedBy(getHasName(MangoBlocks.MANGO_PLANKS.asItem()), has(MangoBlocks.MANGO_PLANKS.asItem()))
+                        .save(output);
             }
         };
     }

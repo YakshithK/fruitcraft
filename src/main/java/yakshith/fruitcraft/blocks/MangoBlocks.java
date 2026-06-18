@@ -127,5 +127,13 @@ public class MangoBlocks {
             true
     );
 
+    // MANGO FENCE
+    public static final Block MANGO_FENCE = register(
+            "mango_fence",
+            FenceBlock::new,
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS),
+            true
+    );
+
     public static void initialize() {}
 }

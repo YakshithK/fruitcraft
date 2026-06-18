@@ -8,13 +8,19 @@
   "block.fruitcraft.mango_wood": "Mango Wood",
   "block.fruitcraft.mango_stairs": "Mango Stairs",
   "block.fruitcraft.mango_slab": "Mango Slab",
+  "block.fruitcraft.mango_fence": "Mango Fence",
+
   "item.fruitcraft.cherry": "Cherry",
   "item.fruitcraft.cherry_seeds": "Cherry Seeds",
+
   "item.fruitcraft.grapes" : "Grapes",
   "item.fruitcraft.grape_seeds": "Grape Seeds",
+
   "item.fruitcraft.lychee": "Lychee",
   "item.fruitcraft.lychee_seeds": "Lychee Seeds",
+
   "item.fruitcraft.dragonfruit": "Dragonfruit",
   "item.fruitcraft.dragonfruit_seeds": "Dragonfruit Seeds",
+
   "item.fruitcraft.fruit_salad": "Fruit Salad"
 }

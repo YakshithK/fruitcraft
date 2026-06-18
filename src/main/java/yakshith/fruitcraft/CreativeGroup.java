@@ -33,14 +33,20 @@ public class CreativeGroup {
                 output.accept(MangoBlocks.MANGO_PLANKS);
                 output.accept(MangoBlocks.MANGO_STAIRS);
                 output.accept(MangoBlocks.MANGO_SLAB);
+                output.accept(MangoBlocks.MANGO_FENCE);
+
                 output.accept(ModItems.CHERRY);
                 output.accept(ModItems.CHERRY_SEEDS);
+
                 output.accept(ModItems.DRAGONFRUIT);
                 output.accept(ModItems.DRAGONFRUIT_SEEDS);
+
                 output.accept(ModItems.LYCHEE);
                 output.accept(ModItems.LYCHEE_SEEDS);
+
                 output.accept(ModItems.GRAPES);
                 output.accept(ModItems.GRAPE_SEEDS);
+
                 output.accept(ModItems.FRUIT_SALAD);
             })
             .build();
