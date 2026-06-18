@@ -4,12 +4,14 @@
   "key": {
     "a": "fruitcraft:lychee",
     "b": "minecraft:bowl",
+    "d": "fruitcraft:dragonfruit",
     "f": "fruitcraft:mango",
     "m": "fruitcraft:cherry"
   },
   "pattern": [
     "fmf",
-    "aba"
+    "dad",
+    " b "
   ],
   "result": {
     "count": 1,
