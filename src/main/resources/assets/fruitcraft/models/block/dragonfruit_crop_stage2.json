@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "fruitcraft:block/dragonfruit_crop_stage2"
-  }
-}
