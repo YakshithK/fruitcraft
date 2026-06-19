@@ -168,5 +168,20 @@ public class MangoBlocks {
             BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noOcclusion()
     );
 
+    // MANGO TRAPDOOR
+    public static final Block MANGO_TRAPDOOR = registerDoor(
+            "mango_trapdoor",
+            settings -> new TrapDoorBlock(BlockSetType.OAK, settings),
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noOcclusion()
+    );
+
+    // MANGO BUTTON
+    public static final Block MANGO_BUTTON = register(
+            "mango_button",
+            settings -> new ButtonBlock(BlockSetType.OAK, 30, settings),
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noCollision(),
+            true
+    );
+
     public static void initialize() {}
 }
