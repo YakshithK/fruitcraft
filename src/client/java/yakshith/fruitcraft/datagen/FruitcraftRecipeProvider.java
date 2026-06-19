@@ -107,6 +107,15 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .group("wooden_fence_gate")
                         .unlockedBy(getHasName(MangoBlocks.MANGO_PLANKS.asItem()), has(MangoBlocks.MANGO_PLANKS.asItem()))
                         .save(output);
+
+                shaped(RecipeCategory.REDSTONE, MangoBlocks.MANGO_DOOR.asItem(), 3)
+                        .pattern("PP")
+                        .pattern("PP")
+                        .pattern("PP")
+                        .define('P', MangoBlocks.MANGO_PLANKS.asItem())
+                        .group("wooden_door")
+                        .unlockedBy(getHasName(MangoBlocks.MANGO_PLANKS.asItem()), has(MangoBlocks.MANGO_PLANKS.asItem()))
+                        .save(output);
             }
         };
     }

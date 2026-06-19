@@ -27,9 +27,9 @@
 Right now mango has log/wood/stripped log/planks. Vanilla wood has 11 variants. Add the missing ones — players will expect them.
 
 - [x] Mango Stairs (from planks)
-- [ ] Mango Slab (from planks)
-- [ ] Mango Fence (from planks + sticks)
-- [ ] Mango Fence Gate (from planks + sticks)
+- [x] Mango Slab (from planks)
+- [x] Mango Fence (from planks + sticks)
+- [x] Mango Fence Gate (from planks + sticks)
 - [ ] Mango Door (from planks)
 - [ ] Mango Trapdoor (from planks)
 - [ ] Mango Button (from planks)

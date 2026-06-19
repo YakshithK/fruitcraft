@@ -6,9 +6,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import yakshith.fruitcraft.Fruitcraft;
 
@@ -35,6 +37,21 @@ public class MangoBlocks {
             BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
         }
+
+        return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
+    }
+
+    private static Block registerDoor(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
+        ResourceKey<Block> blockKey = keyOfBlock(name);
+        ResourceKey<Item> itemKey = keyOfItem(name);
+
+        Block block = blockFactory.apply(settings.setId(blockKey));
+
+        Registry.register(
+                BuiltInRegistries.ITEM,
+                itemKey,
+                new DoubleHighBlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix())
+        );
 
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
     }
@@ -142,6 +159,13 @@ public class MangoBlocks {
             settings -> new FenceGateBlock(WoodType.OAK, settings),
             BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS),
             true
+    );
+
+    // MANGO DOOR
+    public static final Block MANGO_DOOR = registerDoor(
+            "mango_door",
+            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noOcclusion()
     );
 
     public static void initialize() {}
