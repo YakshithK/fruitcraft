@@ -169,10 +169,11 @@ public class MangoBlocks {
     );
 
     // MANGO TRAPDOOR
-    public static final Block MANGO_TRAPDOOR = registerDoor(
+    public static final Block MANGO_TRAPDOOR = register(
             "mango_trapdoor",
             settings -> new TrapDoorBlock(BlockSetType.OAK, settings),
-            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noOcclusion()
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noOcclusion(),
+            true
     );
 
     // MANGO BUTTON

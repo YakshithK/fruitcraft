@@ -1,6 +1,6 @@
 {
-  "parents": "minecraft:block/pressure_plate_up",
-  "texture": {
-    "textures": "fruitcraft:block/mango_planks"
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "fruitcraft:block/mango_planks"
   }
 }
