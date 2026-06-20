@@ -183,5 +183,13 @@ public class MangoBlocks {
             true
     );
 
+    // MANGO PRESSURE PLATE
+    public static final Block MANGO_PRESSURE_PLATE = register(
+            "mango_pressure_plate",
+            settings -> new PressurePlateBlock(BlockSetType.OAK, settings),
+            BlockBehaviour.Properties.ofFullCopy(MANGO_PLANKS).noCollision(),
+            true
+    );
+
     public static void initialize() {}
 }

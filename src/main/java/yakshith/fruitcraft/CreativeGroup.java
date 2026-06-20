@@ -38,6 +38,7 @@ public class CreativeGroup {
                 output.accept(MangoBlocks.MANGO_DOOR);
                 output.accept(MangoBlocks.MANGO_TRAPDOOR);
                 output.accept(MangoBlocks.MANGO_BUTTON);
+                output.accept(MangoBlocks.MANGO_PRESSURE_PLATE);
 
                 output.accept(ModItems.CHERRY);
                 output.accept(ModItems.CHERRY_SEEDS);

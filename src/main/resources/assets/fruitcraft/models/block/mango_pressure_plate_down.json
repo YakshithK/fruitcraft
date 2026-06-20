@@ -1,0 +1,6 @@
+{
+  "parents": "minecraft:block/pressure_plate_down",
+  "texture": {
+    "textures": "fruitcraft:block/mango_planks"
+  }
+}

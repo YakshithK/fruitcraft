@@ -131,6 +131,12 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(MangoBlocks.MANGO_PLANKS.asItem()), has(MangoBlocks.MANGO_PLANKS.asItem()))
                         .save(output);
 
+                shaped(RecipeCategory.REDSTONE, MangoBlocks.MANGO_PRESSURE_PLATE.asItem())
+                        .pattern("PP")
+                        .define('P', MangoBlocks.MANGO_PLANKS.asItem())
+                        .group("wooden_pressure_plates")
+                        .unlockedBy(getHasName(MangoBlocks.MANGO_PLANKS.asItem()), has(MangoBlocks.MANGO_PLANKS.asItem()))
+                        .save(output);
             }
         };
     }
