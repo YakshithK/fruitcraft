@@ -57,7 +57,7 @@ public class CreativeGroup {
             .build();
 
     public static void registerModItemGroup() {
-        Fruitcraft.LOGGER.info("Registering Create Tab");
+        Fruitcraft.LOGGER.info("Registering Fruitcraft Creative Tab");
 
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
     }
