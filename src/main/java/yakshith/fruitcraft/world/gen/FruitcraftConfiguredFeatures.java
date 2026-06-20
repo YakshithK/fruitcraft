@@ -13,11 +13,13 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import yakshith.fruitcraft.Fruitcraft;
+import yakshith.fruitcraft.blocks.LycheeBlocks;
 import yakshith.fruitcraft.blocks.MangoBlocks;
 import yakshith.fruitcraft.blocks.ModBlocks;
 
 public class FruitcraftConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature< ?, ?>> MANGO_TREE_KEY = ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "mango_tree"));
+    public static final ResourceKey<ConfiguredFeature< ?, ?>> LYCHEE_TREE_KEY = ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Fruitcraft.MOD_ID, "lychee_tree"));
 
     public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext <ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -30,6 +32,17 @@ public class FruitcraftConfiguredFeatures {
                         ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
                 ).build();
+
+        TreeConfiguration lycheeTreeConfig = new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(LycheeBlocks.LYCHEE_LOG.defaultBlockState()),
+                new StraightTrunkPlacer(5, 2, 0), //base height, random height, extra
+                BlockStateProvider.simple(LycheeBlocks.LYCHEE_LEAVES.defaultBlockState()),
+                new BlobFoliagePlacer(ConstantInt.of(2),
+                        ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)
+        ).build();
+
+        context.register(LYCHEE_TREE_KEY, new ConfiguredFeature<>(Feature.TREE, lycheeTreeConfig));
         context.register(MANGO_TREE_KEY, new ConfiguredFeature<>(Feature.TREE, mangoTreeConfig));
     }
 

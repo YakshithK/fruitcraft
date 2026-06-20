@@ -13,5 +13,12 @@ public class FruitcraftTreeGrowers {
             Optional.empty()
     );
 
+    public static final TreeGrower LYCHEE = new TreeGrower(
+            "lychee",
+            Optional.empty(),
+            Optional.of(FruitcraftConfiguredFeatures.LYCHEE_TREE_KEY),
+            Optional.empty()
+    );
+
     public static void initialize() {}
 }

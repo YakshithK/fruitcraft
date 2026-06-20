@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": {"model":  "fruitcraft:block/lychee_log"},
+    "axis=x": {"model":  "fruitcraft:block/lychee_log", "x": 90, "y":  90},
+    "axis=z": {"model":  "fruitcraft:block/lychee_log", "x": 90}
+  }
+}

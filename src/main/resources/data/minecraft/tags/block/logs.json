@@ -3,6 +3,10 @@
   "values": [
     "fruitcraft:mango_log",
     "fruitcraft:mango_wood",
-    "fruitcraft:stripped_mango_log"
+    "fruitcraft:stripped_mango_log",
+
+    "fruitcraft:lychee_log",
+    "fruitcraft:lychee_wood",
+    "fruitcraft:stripped_lychee_log"
   ]
 }

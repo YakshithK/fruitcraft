@@ -11,6 +11,18 @@
     "fruitcraft:mango_door",
     "fruitcraft:mango_trapdoor",
     "fruitcraft:mango_button",
-    "fruitcraft:mango_pressure_plate"
+    "fruitcraft:mango_pressure_plate",
+
+    "fruitcraft:lychee_log",
+    "fruitcraft:lychee_wood",
+    "fruitcraft:stripped_lychee_log",
+    "fruitcraft:lychee_stairs",
+    "fruitcraft:lychee_slab",
+    "fruitcraft:lychee_fence",
+    "fruitcraft:lychee_fence_gate",
+    "fruitcraft:lychee_door",
+    "fruitcraft:lychee_trapdoor",
+    "fruitcraft:lychee_button",
+    "fruitcraft:lychee_pressure_plate"
   ]
 }

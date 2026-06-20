@@ -5,10 +5,11 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import yakshith.fruitcraft.items.MangoItems;
+import yakshith.fruitcraft.blocks.LycheeBlocks;
 import yakshith.fruitcraft.blocks.MangoBlocks;
 import yakshith.fruitcraft.blocks.ModBlocks;
 import yakshith.fruitcraft.items.ModItems;
@@ -33,18 +34,38 @@ public class Fruitcraft implements ModInitializer {
 
 		LOGGER.info("Initializing Fruitcraft");
 		ModItems.initialize();
-		MangoItems.initialize();
 		ModBlocks.initialize();
-		MangoItems.initialize();
+
+		MangoBlocks.initialize();
 		StrippableBlockRegistry.register(MangoBlocks.MANGO_LOG, MangoBlocks.STRIPPED_MANGO_LOG);
+
+		LycheeBlocks.initialize();
+		StrippableBlockRegistry.register(LycheeBlocks.LYCHEE_LOG, LycheeBlocks.STRIPPED_LYCHEE_LOG);
+
 		FruitcraftTreeGrowers.initialize();
 		FruitcraftConfiguredFeatures.initialize();
 		FruitcraftPlacedFeatures.initialize();
 
 		BiomeModifications.addFeature(
-				BiomeSelectors.foundInOverworld(),
+				BiomeSelectors.includeByKey(
+						Biomes.JUNGLE,
+						Biomes.SPARSE_JUNGLE,
+						Biomes.BAMBOO_JUNGLE,
+						Biomes.FOREST,
+						Biomes.FLOWER_FOREST
+				),
 				GenerationStep.Decoration.VEGETAL_DECORATION,
 				FruitcraftPlacedFeatures.MANGO_TREE_PLACED_KEY
+		);
+
+		BiomeModifications.addFeature(
+				BiomeSelectors.includeByKey(
+						Biomes.JUNGLE,
+						Biomes.SPARSE_JUNGLE,
+						Biomes.BAMBOO_JUNGLE
+				),
+				GenerationStep.Decoration.VEGETAL_DECORATION,
+				FruitcraftPlacedFeatures.LYCHEE_TREE_PLACED_KEY
 		);
 
 		ModLootTableModifiers.initialize();

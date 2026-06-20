@@ -10,8 +10,6 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import yakshith.fruitcraft.blocks.MangoBlocks;
-import yakshith.fruitcraft.blocks.ModBlocks;
-import yakshith.fruitcraft.items.MangoItems;
 import yakshith.fruitcraft.items.ModItems;
 
 import java.util.List;
@@ -31,18 +29,18 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
 
                 // Mango -> Dried Mango furnace recipe
                 oreSmelting(
-                        List.of(MangoItems.MANGO),          // inputs
+                        List.of(ModItems.MANGO),          // inputs
                         RecipeCategory.FOOD,              // category in the recipe book
-                        MangoItems.DRIED_MANGO,   // output (or ModItems.DRIED_MANGO)
+                        ModItems.DRIED_MANGO,   // output (or ModItems.DRIED_MANGO)
                         0.35f,                            // exp
                         200,                              // cook time in ticks (10 sec)
                         "mango_drying"                    // group id
                 );
 
                 oreBlasting(
-                        List.of(MangoItems.MANGO),
+                        List.of(ModItems.MANGO),
                         RecipeCategory.FOOD,
-                        MangoItems.DRIED_MANGO,
+                        ModItems.DRIED_MANGO,
                         0.35f,
                         100,
                         "mango_drying"
@@ -52,12 +50,12 @@ public class FruitcraftRecipeProvider extends FabricRecipeProvider {
                         .pattern("fmf")
                         .pattern("dad")
                         .pattern(" b ")
-                        .define('f', MangoItems.MANGO)
+                        .define('f', ModItems.MANGO)
                         .define('m', ModItems.CHERRY)
                         .define('b', Items.BOWL)
                         .define('a', ModItems.LYCHEE)
                         .define('d', ModItems.DRAGONFRUIT)
-                        .unlockedBy(getHasName(MangoItems.MANGO), has(MangoItems.MANGO))
+                        .unlockedBy(getHasName(ModItems.MANGO), has(ModItems.MANGO))
                         .save(output);
 
                 shapeless(RecipeCategory.BUILDING_BLOCKS, MangoBlocks.MANGO_PLANKS.asItem(), 4)
