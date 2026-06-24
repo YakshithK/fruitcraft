@@ -2,7 +2,7 @@
 
 Fruitcraft is a Fabric mod for Minecraft that adds fruit, crops, food, and a mango wood set.
 
-The mod is built around a simple idea: Minecraft should have more cozy farming and food variety without feeling out of place. You can grow fruit crops, collect mangoes, craft new foods, and build with mango wood blocks.
+Fruitcraft is built around the idea Minecraft should have more cozy farming and food variety without feeling out of place. You can grow fruit crops, collect mangoes, craft new foods, and build with mango wood blocks.
 
 ## What it adds
 
@@ -57,11 +57,11 @@ The mod is built around a simple idea: Minecraft should have more cozy farming a
 3. Put the Fruitcraft jar in your mods folder.
 4. Launch the game.
 
-## Notes
+## Future
 
-Fruitcraft is still growing. Some textures, recipes, balance, and world generation may change over time.
+Fruitcraft is still growing. Some textures, recipes, balance, and world generation will change over time.
 
-If you find a bug, a missing recipe, or a block that looks wrong, please report it with your Minecraft version, Fabric Loader version, Fabric API version, and the latest log if there was a crash.
+Please report bugs with your Minecraft version, Fabric Loader version, Fabric API version, and the latest log if there was a crash.
 
 ## License
 
