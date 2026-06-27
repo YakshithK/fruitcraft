@@ -30,11 +30,11 @@ Right now mango has log/wood/stripped log/planks. Vanilla wood has 11 variants. 
 - [x] Mango Slab (from planks)
 - [x] Mango Fence (from planks + sticks)
 - [x] Mango Fence Gate (from planks + sticks)
-- [ ] Mango Door (from planks)
-- [ ] Mango Trapdoor (from planks)
-- [ ] Mango Button (from planks)
-- [ ] Mango Pressure Plate (from planks)
-- [ ] Add all new blocks to the appropriate minecraft tags (wooden_stairs, wooden_slabs, etc.)
+- [x] Mango Door (from planks)
+- [x] Mango Trapdoor (from planks)
+- [x] Mango Button (from planks)
+- [x] Mango Pressure Plate (from planks)
+- [x] Add all new blocks to the appropriate minecraft tags (wooden_stairs, wooden_slabs, etc.)
 
 ---
 
@@ -42,7 +42,6 @@ Right now mango has log/wood/stripped log/planks. Vanilla wood has 11 variants. 
 
 The mod is called Fruitcraft but only mango has a tree. Each fruit deserves its own source.
 
-- [ ] **Cherry Tree**: natural cherry blossom-style tree (pink leaves), spawns in flower forests and cherry grove biomes. Drops cherries from leaves (higher rate than vanilla cherry leaves). Cherry sapling grows into it.
 - [ ] **Lychee Tree**: medium-height tropical tree, spawns in jungle biomes. Lychee fruit hangs as a feature off the leaves (or just drops from leaves with 10% chance).
 - [ ] **Grape Vine**: climbing plant like vines, grows on the sides of stone/dirt. Spawns in savanna or plains. Harvest grapes when fully grown.
 - [ ] **Dragonfruit Cactus**: tall, spiky cactus-like plant that grows in desert/badlands. 3-4 blocks tall, drops dragonfruit at full height.

@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "fruitcraft",
 	"version": "${version}",
-	"name": "Fruitcraft",
-	"description": "Adds tropical fruit trees, crops, and food to Minecraft. Grow mangoes, cherries, grapes, lychees, and dragonfruits — each with unique effects.",
+	"name": "Blooming Groves",
+	"description": "Adds tropical fruit trees, crops, food, and mango wood blocks to Minecraft. Grow mangoes, cherries, grapes, lychees, and dragonfruits, each with unique effects.",
 	"authors": [
 		"Yakshith"
 	],

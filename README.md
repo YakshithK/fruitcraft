@@ -1,8 +1,8 @@
-# Fruitcraft
+# Blooming Groves
 
-Fruitcraft is a Fabric mod for Minecraft that adds fruit, crops, food, and a mango wood set.
+Blooming Groves is a Fabric mod for Minecraft that adds fruit, crops, food, and tropical tree content.
 
-Fruitcraft is built around the idea Minecraft should have more cozy farming and food variety without feeling out of place. You can grow fruit crops, collect mangoes, craft new foods, and build with mango wood blocks.
+Blooming Groves is built around the idea Minecraft should have more cozy farming and food variety without feeling out of place. You can grow fruit crops, collect mangoes and lychees, craft new foods, and build with mango wood blocks.
 
 ## What it adds
 
@@ -54,15 +54,15 @@ Fruitcraft is built around the idea Minecraft should have more cozy farming and 
 
 1. Install Fabric Loader for Minecraft 1.21.11.
 2. Install Fabric API.
-3. Put the Fruitcraft jar in your mods folder.
+3. Put the Blooming Groves jar in your mods folder.
 4. Launch the game.
 
 ## Future
 
-Fruitcraft is still growing. Some textures, recipes, balance, and world generation will change over time.
+Blooming Groves is still growing. Some textures, recipes, balance, and world generation will change over time.
 
 Please report bugs with your Minecraft version, Fabric Loader version, Fabric API version, and the latest log if there was a crash.
 
 ## License
 
-Fruitcraft is licensed under the MIT License.
+Blooming Groves is licensed under the MIT License.
