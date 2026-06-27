@@ -4,6 +4,20 @@ Blooming Groves is a Fabric mod for Minecraft that adds fruit, crops, food, and 
 
 Blooming Groves is built around the idea Minecraft should have more cozy farming and food variety without feeling out of place. You can grow fruit crops, collect mangoes and lychees, craft new foods, and build with mango wood blocks.
 
+## Gallery
+
+### Mango trees
+
+![Mango trees growing in the world](images/mango_trees.png)
+
+### Fruit items
+
+![Fruit items and foods added by Blooming Groves](images/items.png)
+
+### Infinity Bowl advancement
+
+![Infinity Bowl advancement for crafting fruit salad](images/infinity_bowl.png)
+
 ## What it adds
 
 ### Fruit and food
